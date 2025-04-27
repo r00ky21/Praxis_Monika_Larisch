@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import Image from "next/image"
+import OptimizedImage from "@/components/ui/optimized-image"
 import { navigationItems } from "@/app/page"
 
 interface HeaderProps {
@@ -22,7 +22,7 @@ export default function Header({ activeSection, onNavigate, isMobileMenuOpen, on
           className="text-xl font-semibold text-gray-800 hover:opacity-80 transition-opacity duration-200"
         >
           <div className="min-w-[120px] md:min-w-[200px] flex-shrink-0">
-            <Image
+            <OptimizedImage
               src="/Logo_Name.png"
               alt="Psychotherapeutische Praxis Logo"
               width={200}

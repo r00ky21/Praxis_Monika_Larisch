@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Icon } from "@iconify/react"
-import Image from "next/image"
+import OptimizedImage from "@/components/ui/optimized-image"
 
 export default function PsychotherapieSection() {
   const cards = [
@@ -71,7 +71,7 @@ export default function PsychotherapieSection() {
           viewport={{ once: true }}
           className="relative h-[400px] rounded-lg overflow-hidden shadow-xl"
         >
-          <Image src="/familienbrett_1.jpg" alt="Praxis" fill className="object-cover" />
+          <OptimizedImage src="/Familienbrett_1.jpg" alt="Psychotherapie" fill className="object-cover" />
         </motion.div>
 
         <motion.div

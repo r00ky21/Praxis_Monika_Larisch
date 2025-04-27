@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { useCallback } from "react"
 import { Icon } from "@iconify/react"
+import OptimizedImage from "@/components/ui/optimized-image"
 
 interface HomeSectionProps {
   scrollToSection: (sectionId: string) => void
@@ -71,7 +72,7 @@ export default function HomeSection({ scrollToSection }: HomeSectionProps) {
             viewport={{ once: true }}
             className="relative h-[400px] rounded-lg overflow-hidden bg-white flex items-center justify-center"
           >
-            <Image
+            <OptimizedImage
               src="/portrait_monika_1.jpg"
               alt="portrait_monika_1"
               fill

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
+import OptimizedImage from "@/components/ui/optimized-image"
 
 export default function PortraitSection() {
   return (
@@ -43,7 +43,7 @@ export default function PortraitSection() {
           viewport={{ once: true }}
           className="relative h-[400px] rounded-lg overflow-hidden shadow-xl"
         >
-          <Image
+          <OptimizedImage
             src="/portrait_monika_2.jpg"
             alt="Monika Larisch"
             fill

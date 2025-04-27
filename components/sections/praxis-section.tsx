@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
+import OptimizedImage from "@/components/ui/optimized-image"
 
 export default function PraxisSection() {
   return (
@@ -14,7 +14,7 @@ export default function PraxisSection() {
           viewport={{ once: true }}
           className="relative h-[400px] rounded-lg overflow-hidden shadow-xl order-2 md:order-1"
         >
-          <Image src="/praxis_1.jpg" alt="Praxis" fill className="object-cover" />
+          <OptimizedImage src="/praxis_1.jpg" alt="Praxis" fill className="object-cover" />
         </motion.div>
 
         <motion.div

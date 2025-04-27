@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
+import OptimizedImage from "@/components/ui/optimized-image"
 
 const Banner = () => {
   return (
@@ -11,7 +11,7 @@ const Banner = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Image
+      <OptimizedImage
         src="/header.jpg"
         alt="Wassertropfen auf einem grünen Blatt"
         fill
