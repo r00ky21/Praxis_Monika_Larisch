@@ -94,7 +94,6 @@ export default function Home() {
         const footerTop = footerRect.top
         const footerHeight = footerRect.height
         const windowHeight = window.innerHeight
-        const buttonHeight = 48 // 12 rem = 48px
 
         if (footerTop < windowHeight) {
           // Footer ist im Sichtfeld - berechne den optimalen Abstand
@@ -162,11 +161,15 @@ export default function Home() {
         onNavigate={scrollToSection}
         isMobileMenuOpen={isMobileMenuOpen}
         onMobileMenuToggle={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        navigationItems={navigationItems}
       />
 
       {/* Inhaltsabschnitte */}
       <div id="home" ref={homeRef}>
-        <HomeSection scrollToSection={scrollToSection} />
+        <HomeSection
+          scrollToSection={scrollToSection}
+          navigationItems={navigationItems}
+        />
       </div>
 
       <div id="praxis" ref={praxisRef}>

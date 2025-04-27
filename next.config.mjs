@@ -12,8 +12,11 @@ const nextConfig = {
     domains: [],
   },
   output: 'export',
-  basePath: '/Praxis_Monika_Larisch',
-  assetPrefix: '/Praxis_Monika_Larisch',
+  // basePath und assetPrefix nur für Produktion (GitHub Pages), nicht für Entwicklung
+  ...(process.env.NODE_ENV === 'production' ? {
+    basePath: '/Praxis_Monika_Larisch',
+    assetPrefix: '/Praxis_Monika_Larisch',
+  } : {}),
   trailingSlash: true,
 }
 

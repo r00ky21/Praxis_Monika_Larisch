@@ -1,13 +1,18 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
 import { useCallback } from "react"
 import { Icon } from "@iconify/react"
 import OptimizedImage from "@/components/ui/optimized-image"
 
+interface NavigationItem {
+  id: string
+  name: string
+}
+
 interface HomeSectionProps {
   scrollToSection: (sectionId: string) => void
+  navigationItems?: NavigationItem[]
 }
 
 const features = [
@@ -33,7 +38,7 @@ const features = [
   },
 ]
 
-export default function HomeSection({ scrollToSection }: HomeSectionProps) {
+export default function HomeSection({ scrollToSection, navigationItems = [] }: HomeSectionProps) {
   const scrollToContact = useCallback(() => {
     scrollToSection('kontakt')
   }, [scrollToSection])

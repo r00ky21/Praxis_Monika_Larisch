@@ -2,16 +2,21 @@
 
 import { motion, AnimatePresence } from "framer-motion"
 import OptimizedImage from "@/components/ui/optimized-image"
-import { navigationItems } from "@/app/page"
+
+interface NavigationItem {
+  id: string
+  name: string
+}
 
 interface HeaderProps {
   activeSection: string
   onNavigate: (sectionId: string) => void
   isMobileMenuOpen: boolean
   onMobileMenuToggle: () => void
+  navigationItems: NavigationItem[]
 }
 
-export default function Header({ activeSection, onNavigate, isMobileMenuOpen, onMobileMenuToggle }: HeaderProps) {
+export default function Header({ activeSection, onNavigate, isMobileMenuOpen, onMobileMenuToggle, navigationItems }: HeaderProps) {
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 bg-white/95 shadow-md backdrop-blur-sm h-20`}
