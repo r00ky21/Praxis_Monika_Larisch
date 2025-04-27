@@ -9,6 +9,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  output: 'export',
+  basePath: '/Praxis_Monika_Larisch',
+  assetPrefix: '/Praxis_Monika_Larisch',
 }
 
 export default nextConfig
